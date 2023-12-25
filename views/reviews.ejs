@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('head', {title: 'Movie Database - Reviews'}); %>
+    <%- include('head', {title: 'Movies Database v2.0 - Reviews'}); %>
   </head>
 
   <body>
@@ -26,13 +26,13 @@
             <div class="tile is-ancestor">
               <div class="tile is-parent">
                 <% if (!reviews || !reviews.sentiment) { %>
-                  <article class="tile is-child box">
+                  <article class="tile is-child box" style="background-color: lightgrey">
                 <% } else if(reviews.sentiment === 'positive') {%>
-                  <article class="tile is-child box notification is-primary">
+                  <article class="tile is-child box notification is-primary" style="background-color: lightgreen">
                 <% } else if(reviews.sentiment === 'negative') {%>
-                  <article class="tile is-child box notification is-warning">
+                  <article class="tile is-child box notification is-warning" style="background-color: red">
                 <% } else { %>
-                  <article class="tile is-child box">
+                  <article class="tile is-child box" style="background-color: skyblue">
                 <% } %>
                 <p class="title"><%= reviews.movie %></p>
                 <p class="subtitle">
